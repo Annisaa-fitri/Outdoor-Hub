@@ -17,7 +17,7 @@ require_once 'koneksi.php';
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-bar">
         <div class="container">
             <a class="navbar-brand" href="index.php">
                 <img src="assets/logo.png" alt="Logo" class="navbar-logo">
