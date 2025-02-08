@@ -92,7 +92,7 @@ require_once 'koneksi.php';
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="assets/odesey.jpg" class="card-img-top" alt="Toko 1">
+                    <img src="assets/toko/odesey.jpg" class="card-img-top" alt="Toko 1">
                     <div class="card-body">
                         <h5 class="card-title">Odessey Outdoor <span class="rating">⭐ 5.0</span></h5>
                         <p class="card-text">Harga Murah</p>
@@ -101,7 +101,7 @@ require_once 'koneksi.php';
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="assets/toko/alment.jpg" class="card-img-top" alt="Toko 2">
+                    <img src="assets/toko/Alment-Rentalkemp.jpg" class="card-img-top" alt="Toko 2">
                     <div class="card-body">
                         <h5 class="card-title">Alment Camping <span class="rating">⭐ 4.9</span></h5>
                         <p class="card-text">Kualitas Terbaik</p>
@@ -110,7 +110,7 @@ require_once 'koneksi.php';
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="assets/lotse.jpg" class="card-img-top" alt="Toko 3">
+                    <img src="assets/toko/lotse.jpg" class="card-img-top" alt="Toko 3">
                     <div class="card-body">
                         <h5 class="card-title">Lotse Outdoor <span class="rating">⭐ 4.8</span></h5>
                         <p class="card-text">Promo Menarik</p>
@@ -125,7 +125,7 @@ require_once 'koneksi.php';
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="assets/wisata1.jpg" class="card-img-top" alt="Wisata 1">
+                    <img src="assets/wisata/wisata1.jpg" class="card-img-top" alt="Wisata 1">
                     <div class="card-body">
                         <h5 class="card-title">Rancaupas</h5>
                     </div>
@@ -133,7 +133,7 @@ require_once 'koneksi.php';
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="assets/wisata2.jpg" class="card-img-top" alt="Wisata 2">
+                    <img src="assets/wisata/wisata2.jpg" class="card-img-top" alt="Wisata 2">
                     <div class="card-body">
                         <h5 class="card-title">Gunung mega</h5>
                     </div>
@@ -141,7 +141,7 @@ require_once 'koneksi.php';
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="assets/wisata3.jpg" class="card-img-top" alt="Wisata 3">
+                    <img src="assets/wisata/wisata3.jpg" class="card-img-top" alt="Wisata 3">
                     <div class="card-body">
                         <h5 class="card-title">Gunung Artapela</h5>
                     </div>
