@@ -88,18 +88,21 @@ require_once 'koneksi.php';
 
 
     <div class="container mt-4">
-        <h2 class="text-center">Toko Populer</h2>
-        <div class="row">
-            <div class="col-md-4">
+    <h2 class="text-center">Toko Populer</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <a href="detail_toko.php?id_toko=52" class="text-decoration-none">
                 <div class="card">
-                    <img src="assets/toko/odesey.jpg" class="card-img-top" alt="Toko 1">
+                    <img src="assets/toko/Odyssey-Outdoor.jpg" class="card-img-top" alt="Toko 1">
                     <div class="card-body">
                         <h5 class="card-title">Odessey Outdoor <span class="rating">⭐ 5.0</span></h5>
                         <p class="card-text">Harga Murah</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="detail_toko.php?id_toko=2" class="text-decoration-none">
                 <div class="card">
                     <img src="assets/toko/Alment-Rentalkemp.jpg" class="card-img-top" alt="Toko 2">
                     <div class="card-body">
@@ -107,18 +110,22 @@ require_once 'koneksi.php';
                         <p class="card-text">Kualitas Terbaik</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="detail_toko.php?id_toko=6" class="text-decoration-none">
                 <div class="card">
-                    <img src="assets/toko/lotse.jpg" class="card-img-top" alt="Toko 3">
+                    <img src="assets/toko/buver-adventure.jpg" class="card-img-top" alt="Toko 3">
                     <div class="card-body">
-                        <h5 class="card-title">Lotse Outdoor <span class="rating">⭐ 4.8</span></h5>
-                        <p class="card-text">Promo Menarik</p>
+                        <h5 class="card-title">BUVER ADVENTURE <span class="rating">⭐ 4.8</span></h5>
+                        <p class="card-text">Toko Terlengkap di Bandung</p>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
+</div>
+
 
     <div class="container mt-4">
         <h2 class="text-center">Rekomendasi Tempat Wisata</h2>

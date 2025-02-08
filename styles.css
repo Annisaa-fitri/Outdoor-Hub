@@ -490,6 +490,7 @@ body.index-page {
 
 .card-img-top {
     border-radius: 10px 10px 0 0;
+    height: 235px;
 }
 
 .card-body {
