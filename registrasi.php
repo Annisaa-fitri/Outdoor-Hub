@@ -10,7 +10,7 @@ if (isset($_POST['register'])) {
     $password = $_POST['password'];
     $tanggal_lahir = $_POST['tanggal_lahir'];
 
-    $check = mysqli_query($koneksi, "SELECT COUNT(*) AS jumlah FROM users");
+    $check = mysqli_query($conn, "SELECT COUNT(*) AS jumlah FROM users");
     // Cek apakah username sudah ada
     $check_username = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
     if (mysqli_num_rows($check_username) > 0) {
