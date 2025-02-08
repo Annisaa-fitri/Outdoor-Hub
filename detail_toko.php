@@ -68,7 +68,7 @@ if (!file_exists($pathGambar)) {
     <title>Detail Toko</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="index.php">
             <img src="assets/logo.png" alt="Logo" class="navbar-logo">
