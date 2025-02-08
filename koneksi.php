@@ -3,6 +3,10 @@ session_start();
 //bikin koneksi
 $conn = mysqli_connect('localhost','root','','outdoorhub');
 
+// Periksa koneksi
+if (!$conn) {
+    die("Koneksi database gagal: " . mysqli_connect_error());
+}
 //login
 if(isset($_POST['login'])){
     //initiate variabel

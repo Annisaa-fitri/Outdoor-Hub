@@ -1,5 +1,5 @@
 <?php
-require 'koneksi.php'; // Pastikan file koneksi.php sudah ada
+require 'koneksi.php'; // Pastikan koneksi diimpor dengan benar
 
 $error = '';
 $success = '';
@@ -11,7 +11,7 @@ if (isset($_POST['register'])) {
     $tanggal_lahir = $_POST['tanggal_lahir'];
 
     // Cek apakah username sudah ada
-    $check_username = mysqli_query($koneksi, "SELECT * FROM users WHERE username = '$username'");
+    $check_username = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
     if (mysqli_num_rows($check_username) > 0) {
         $error = "Username sudah digunakan!";
     } else {
@@ -20,10 +20,10 @@ if (isset($_POST['register'])) {
 
         // Simpan data ke database
         $query = "INSERT INTO users (username, password, alamat, tanggal_lahir) VALUES ('$username', '$hashed_password', '$alamat', '$tanggal_lahir')";
-        if (mysqli_query($koneksi, $query)) {
+        if (mysqli_query($conn, $query)) {
             $success = "Registrasi berhasil! Silakan login.";
         } else {
-            $error = "Terjadi kesalahan saat registrasi: " . mysqli_error($koneksi);
+            $error = "Terjadi kesalahan saat registrasi: " . mysqli_error($conn);
         }
     }
 }

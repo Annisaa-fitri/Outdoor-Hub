@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2025 at 07:18 PM
+-- Generation Time: Feb 08, 2025 at 09:33 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -73,7 +73,7 @@ INSERT INTO `toko` (`id`, `nama`, `alamat`, `deskripsi`, `jam_operasional`, `lat
 (27, 'KAI Outdoor Gear Rental', 'Jl. Boko I No.3, Melong, Kec. Cimahi Sel., Kota Cimahi, Jawa Barat 40534', 'Menyewakan peralatan camping terlengkap dengan harga terjangkau disertai kualitas produk yang baik.', '7.00 am–7.00 pm', '-6.918284', '107.559896', 4.8, '085150696961'),
 (28, 'NINETHREE OUTDOOR Rental Alat Camping Bandung (Cicadas)', 'Jl Asber Gg. Bunga II No.10B 143d, Cicadas, Kec. Cibeunying Kidul, Kota Bandung, Jawa Barat 40121', 'Sewa Peralatan camping, berlokasi di Cibeunying Bandung.', '8.00 am–9.00 pm', '-6.9065922', '107.638648', 5, '083137724473'),
 (29, 'Green Campus Outdoor', 'Jl. Cisasawi RT/RW 2/5 No 99, Jl. Cihanjuang No.KM 4 No.101, RT.01/RW.13, Cihanjuang, Kec. Parongpong, Kabupaten Bandung Barat, Jawa Barat 40559', 'Penyewaan perlengkapan alat outdoor, gunung dan camping di Bandung.', '8.00 am–10.00 pm', '-6.8525218', '107.5688661', 5, '082215598650'),
-(30, 'RENTAL CAMPING HARDER MOUNTAIN', 'KP Jl. Babakan Cianjur No.19, RT.03/RW.10, Gadobangkong, Kec. Ngamprah, Kabupaten Bandung Barat, Jawa Barat 40552', 'Sewa Peralatan camping, berlokasi di Bandung.', '10.00 am–10.00 pm', '6.871857', '107.5082123', 4.9, '082127442944'),
+(30, 'RENTAL CAMPING HARDER MOUNTAIN', 'KP Jl. Babakan Cianjur No.19, RT.03/RW.10, Gadobangkong, Kec. Ngamprah, Kabupaten Bandung Barat, Jawa Barat 40552', 'Sewa Peralatan camping, berlokasi di Bandung.', '10.00 am–10.00 pm', '-6.871857', '107.5082123', 4.9, '082127442944'),
 (31, 'Three Outdoor Rental Alat Camping', 'Gg. Ab0 No.19-30, Sekejati, Kec. Buahbatu, Kota Bandung, Jawa Barat 40286', 'Three_outdoor adalah tempat persewaan peralatan camping dengan pelayanan antar barang atau ambil di tempat.', '8.00 am–9.00 pm', '-6.9462101', '107.6507173', 5, '0895110006064'),
 (32, 'Pesagi Outdoor Equipment Rental Alat Camping Bandung', 'Jl. Sukahaji Wetan No.38, RT.04/RW.07, Sukarasa, Kec. Sukasari, Kota Bandung, Jawa Barat 40152', 'Sewa Peralatan camping Tenda dll.', '9.00 am–5.00 pm', '-6.8727649', '107.5853866', 4.8, '085609556216'),
 (33, 'Rental Camping Alf Gear Adventure', 'Gg. Perikanan 2 No.56, RT./RW/RW.003/005, Pelindung Hewan, Kec. Astanaanyar, Kota Bandung, Jawa Barat 40242', 'Menyewakan berbagai macam jenis kebutuhan camping', '6:00 am–11:00 pm', '-6.9395308', '107.6028211', 5, '08122177723'),
@@ -117,6 +117,28 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
 (1, 'admin', 'admin');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `alamat` enum('Jakarta','Bandung','Surabaya','Yogyakarta','Bali') NOT NULL,
+  `tanggal_lahir` date NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `alamat`, `tanggal_lahir`, `created_at`) VALUES
+(2, '12312', '$2y$10$htc5bl5FZSuOKUJlflESA.MPc8ejjpchXWHxzfRUtQ6LN0E.wyEHW', 'Yogyakarta', '0000-00-00', '2025-02-08 20:32:22');
+
 --
 -- Indexes for dumped tables
 --
@@ -134,6 +156,13 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -148,6 +177,12 @@ ALTER TABLE `toko`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
