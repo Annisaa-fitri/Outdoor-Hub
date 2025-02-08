@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2025 at 11:38 AM
+-- Generation Time: Feb 08, 2025 at 01:20 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,11 +44,11 @@ CREATE TABLE `toko` (
 --
 
 INSERT INTO `toko` (`id`, `nama`, `alamat`, `deskripsi`, `lat`, `lon`, `rating`, `range_harga`, `notelp`) VALUES
-(1, 'Green Camp', 'Gagak', '', '-6.8932225', '107.6275743', 0, '', ''),
-(2, 'Alment', 'Jl. Puyuh Dalam II No.5, RT.05/RW.09, Sadang Serang, Kecamatan Coblong, Kota Bandung, Jawa Barat 40133', '', '-6.8973593', '107.6239368', 4.3, '', ''),
-(3, 'Potong Kompas', 'Jl. Gagak No.158A, Sukaluyu, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40123', '', '-6.8939638', '107.6278913', 0, '', ''),
-(4, 'Ngawana Outdoor Rental', 'Jl. Manteron No.18, Sukaluyu, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40123', '', '-6.89553', '107.6304452', 0, '', ''),
-(5, 'Sam Outdoor Shop', 'Jl. Haur Pancuh No.86, Lebakgede, Kecamatan Coblong, Kota Bandung, Jawa Barat 40132', '', '-6.8950332', '107.6190435', 0, '', '');
+(1, 'Green Camp', 'Jl. Gagak No.174, Sadang Serang, Kecamatan Coblong, Kota Bandung, Jawa Barat 40133', '', '-6.8932225', '107.6275743', 4.5, '', ''),
+(2, 'Alment Rentalkemp', 'Jl. Puyuh Dalam II No.5, RT.05/RW.09, Sadang Serang, Kecamatan Coblong, Kota Bandung, Jawa Barat 40133', '', '-6.8973593', '107.6239368', 4.3, '', ''),
+(3, 'Potong Kompas', 'Jl. Gagak No.158A, Sukaluyu, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40123', '', '-6.8939638', '107.6278913', 4.6, '', ''),
+(4, 'Ngawana Outdoor Rental', 'Jl. Manteron No.18, Sukaluyu, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40123', '', '-6.89553', '107.6304452', 4.3, '', ''),
+(5, 'Sam Outdoor Shop', 'Jl. Haur Pancuh No.86, Lebakgede, Kecamatan Coblong, Kota Bandung, Jawa Barat 40132', '', '-6.8950332', '107.6190435', 4.5, '', '');
 
 -- --------------------------------------------------------
 
