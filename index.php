@@ -17,7 +17,7 @@ require_once 'koneksi.php';
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-index">
         <div class="container">
             <a class="navbar-brand" href="index.php">
                 <img src="assets/logo.png" alt="Logo" class="navbar-logo">
@@ -65,7 +65,7 @@ require_once 'koneksi.php';
         <!-- Text Title above the search bar -->
         <h1 class="text-center text-white mb-3">TEMUKAN TOKO ALAT SEWA CAMPING TERDEKAT</h1>
         <div class="autocomplete-container d-flex w-50">
-            <i class="fa-solid fa-location-pin"></i><button class="btn btn-custom" onclick="getLocation()">Lokasi Saya<br /> Saat Ini</button>
+            <i class="fa-solid fa-location-pin"></i><button class="btn btn-custom" onclick="getLocation()">Lokasi Saya Saat Ini</button>
             <!-- Search Bar -->
             <input type="text" id="search-box" class="form-control" placeholder="Masukkan Daerah Wilayah Anda" onclick="searchLocation()">
 
@@ -159,6 +159,7 @@ require_once 'koneksi.php';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js"></script>
     <script src="script.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    
 </body>
 
 </html>

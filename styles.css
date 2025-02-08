@@ -56,7 +56,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
-    height: 100vh; 
+    height: 60vh; 
     color: white; 
     display: flex;
     justify-content: center;
@@ -87,8 +87,7 @@ body {
     width: 100%;
     border-radius: 25px;
     overflow: hidden;
-    border: 1px solid #ccc;  /* Border yang konsisten untuk keseluruhan container */
-    margin-top: 20px;
+    border: 1px solid #ccc;
 }
 
 
@@ -97,10 +96,39 @@ body {
 
 .navbar {
     background: rgba(40, 67, 45, 0.9); /* Warna hijau tua dengan transparansi */
-    backdrop-filter: blur(10px); /* Efek blur lebih kuat */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
 }
+
+/* Navbar khusus di index.php */
+.navbar-index {
+    background: transparent !important; /* Transparan */
+    box-shadow: none !important; 
+    position: absolute; /* Agar menempel di atas */
+    width: 100%; /* Lebar penuh */
+    top: 0;
+    z-index: 1000; /* Supaya tidak tertutup elemen lain */
+    transition: background 0.3s ease-in-out;
+}
+
+
+
+.navbar-index .nav-link {
+    color: white !important;
+}
+
+.navbar-index .nav-link:hover {
+    background: rgba(255, 215, 0, 0.9); /* Warna emas */
+    color: black !important;
+    transform: translateY(-2px);
+}
+
+/* Background khusus halaman index */
+body.index-page {
+    background: url('assets/background.jpg') no-repeat center center/cover;
+    height: 75vh; /* Full layar */
+}
+
 
 .navbar-brand {
     font-size: 24px;

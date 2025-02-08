@@ -138,7 +138,7 @@ if (!file_exists($pathGambar)) {
                         <i class="fas fa-map"></i> Buka di Google Maps
                     </a>
                     
-                    <button id="route-btn" class="btn btn-success">
+                    <button id="route-btn" class="btn btn-warning">
                         <i class="fas fa-route"></i> Lihat Rute
                     </button>
                 </div>
