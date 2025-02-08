@@ -10,6 +10,7 @@ if (isset($_POST['register'])) {
     $password = $_POST['password'];
     $tanggal_lahir = $_POST['tanggal_lahir'];
 
+    $check = mysqli_query($koneksi, "SELECT COUNT(*) AS jumlah FROM users");
     // Cek apakah username sudah ada
     $check_username = mysqli_query($koneksi, "SELECT * FROM users WHERE username = '$username'");
     if (mysqli_num_rows($check_username) > 0) {
@@ -31,6 +32,7 @@ if (isset($_POST['register'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +40,7 @@ if (isset($_POST['register'])) {
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body class="login-body">
     <div class="login-container">
         <div class="login-card">
@@ -85,4 +88,5 @@ if (isset($_POST['register'])) {
         </div>
     </div>
 </body>
+
 </html>
