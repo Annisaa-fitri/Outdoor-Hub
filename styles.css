@@ -559,3 +559,47 @@ body.index-page {
     overflow: hidden;
 }
 
+.toko-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    transition: transform 0.2s ease-in-out;
+    max-width: 90%;
+}
+
+.toko-card:hover {
+    transform: translateY(-2px);
+}
+
+.toko-img {
+    width: 100px;
+    height: 75px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.toko-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.toko-info h6 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.toko-info p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.toko-info .btn {
+    font-size: 12px;
+    padding: 3px 8px;
+}
+

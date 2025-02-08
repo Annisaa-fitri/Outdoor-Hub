@@ -81,7 +81,7 @@ require_once 'koneksi.php';
 
     <div id="map-section">
         <div id="map"></div>
-        <div id="nearest-toko"></div>
+        <div id="nearest-toko" class="mt-4"></div>
     </div>
 
 

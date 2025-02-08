@@ -34,11 +34,36 @@ function getLocation() {
             .then(data => {
                 let nearestTokos = findNearestToko(lat, lon, data);
                 
-                // Tampilkan 3 toko terdekat
-                let tokoHTML = '<h2>Toko Terdekat dari anda</h2>';
+                // Tampilkan 3 toko terdekat dengan Card
+                let tokoHTML = `<h2 class="text-center mb-3">Toko Terdekat dari Anda</h2>`;
+
                 nearestTokos.forEach(toko => {
-                    tokoHTML += `<p><strong>${toko.nama}</strong><br>Alamat: ${toko.alamat}</p>`;
+                    let namaFile = toko.nama.toLowerCase().replace(/\s+/g, '-') + '.jpg';
+                    let pathGambar = `assets/toko/${namaFile}`;
+                
+                    let img = new Image();
+                    img.src = pathGambar;
+                    img.onerror = function () {
+                        this.src = "assets/toko/default.jpg";
+                    };
+                    img.className = "toko-img";
+                
+                    tokoHTML += `
+                        <div class="toko-card mb-2 d-flex align-items-center">
+                            ${img.outerHTML}
+                            <div class="toko-info">
+                                <h6 class="mb-1">${toko.nama}</h6>
+                                <p class="small text-muted"><i class="fa-solid fa-map-marker-alt"></i> ${toko.alamat}</p>
+                                <a href="detail_toko.php?id_toko=${toko.id}" class="btn btn-sm btn-primary">Lihat Detail</a>
+                            </div>
+                        </div>
+                    `;
                 });
+                
+                
+                
+                
+                tokoHTML += `</div>`;
 
                 // Tempatkan hasil di dalam elemen dengan id "nearest-toko"
                 document.getElementById("nearest-toko").innerHTML = tokoHTML;
@@ -60,6 +85,7 @@ function getLocation() {
         alert("Geolokasi tidak didukung di browser ini.");
     }
 }
+
 
 
 document.getElementById("nearest-toko").style.display = "block";
