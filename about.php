@@ -1,7 +1,3 @@
-<?php
-require_once 'koneksi.php';
-?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -10,7 +6,7 @@ require_once 'koneksi.php';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>Tentang Kami</title>
+    <title>Tentang Kami - Outdoor Hub</title>
 </head>
 <body>
 
@@ -18,7 +14,7 @@ require_once 'koneksi.php';
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="index.php">
-            <img src="assets/logo.png" alt="Logo" class="navbar-logo">
+            <img src="assets/logo.png" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -34,38 +30,49 @@ require_once 'koneksi.php';
 </nav>
 
 <!-- About Section -->
-<div class="container mt-5 text-center">
+<div class="container about-section">
     <h2 class="mb-4">Tentang Kami</h2>
-    <p class="lead">Selamat datang di Outdoor Hub, platform terbaik untuk menemukan toko penyewaan alat camping terdekat!</p>
-    <p>Kami hadir untuk mempermudah para pecinta alam dalam mencari dan menyewa perlengkapan camping dengan mudah dan cepat.</p>
-    <img src="assets/about-banner.jpg" alt="Tentang Kami" class="img-fluid rounded mt-3">
+    <p class="lead">Outdoor Hub adalah platform yang memudahkan pencarian dan penyewaan peralatan camping. Dengan peta interaktif dan informasi lengkap toko, kami membantu Anda menemukan perlengkapan outdoor terbaik dengan mudah. 🌿🏕️</p>
 </div>
 
 <!-- Team Section -->
-<div class="container mt-5">
+<!-- Team Section -->
+<div class="container team-section">
     <h3 class="text-center mb-4">Tim Kami</h3>
-    <div class="row text-center">
-        <div class="col-md-4">
-            <img src="assets/team1.jpg" class="rounded-circle mb-2" width="150" alt="Tim 1">
-            <h5>Rizky Saputra</h5>
-            <p>Founder & CEO</p>
+    <div class="row justify-content-center text-center">
+        <div class="col-md-4 col-sm-6 team-member">
+            <img src="assets/about/rexa.png" class="img-fluid rounded-circle" alt="Rexa Apriliandy">
+            <h5 class="mt-3 fw-bold">Rexa Apriliandy</h5>
+            <p>Fullstack Developer (PM)</p>
         </div>
-        <div class="col-md-4">
-            <img src="assets/team2.jpg" class="rounded-circle mb-2" width="150" alt="Tim 2">
-            <h5>Anisa Rahma</h5>
-            <p>Marketing Director</p>
+        <div class="col-md-4 col-sm-6 team-member">
+            <img src="assets/about/fred.png" class="img-fluid rounded-circle" alt="Frederick Cornelius">
+            <h5 class="mt-3 fw-bold">Frederick Cornelius</h5>
+            <p>Fullstack Developer</p>
         </div>
-        <div class="col-md-4">
-            <img src="assets/team3.jpg" class="rounded-circle mb-2" width="150" alt="Tim 3">
-            <h5>Bayu Pratama</h5>
-            <p>Lead Developer</p>
+        <div class="col-md-4 col-sm-6 team-member">
+            <img src="assets/about/teta.png" class="img-fluid rounded-circle" alt="Tetta Trisky">
+            <h5 class="mt-3 fw-bold">Tetta Trisky</h5>
+            <p>Fullstack Developer</p>
+        </div>
+    </div>
+    <div class="row justify-content-center text-center mt-4">
+        <div class="col-md-4 col-sm-6 team-member">
+            <img src="assets/about/anisa.png" class="img-fluid rounded-circle" alt="Annisa Fitri">
+            <h5 class="mt-3 fw-bold">Annisa Fitri</h5>
+            <p>Technical Writer</p>
+        </div>
+        <div class="col-md-4 col-sm-6 team-member">
+            <img src="assets/about/tasya.png" class="img-fluid rounded-circle" alt="Tasya Tirta Sari">
+            <h5 class="mt-3 fw-bold">Tasya Tirta Sari</h5>
+            <p>Technical Writer</p>
         </div>
     </div>
 </div>
 
 <!-- Footer -->
-<footer class="bg-dark text-white text-center p-3 mt-5">
-    &copy; 2025 Outdoor Hub - Semua Hak Dilindungi
+<footer>
+    &copy; 2025 Outdoor Hub
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

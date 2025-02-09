@@ -1,5 +1,5 @@
 <?php
-require 'koneksi.php'; // Pastikan file koneksi.php sudah ada
+require 'koneksi.php'; // Pastikan koneksi database diimpor dengan benar
 
 $error = '';
 $success = '';
@@ -35,25 +35,26 @@ function submitRegistration($conn, $username, $password, $alamat, $tanggal_lahir
 {
     $check_username = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
     if (mysqli_num_rows($check_username) > 0) {
-        $error = "Username sudah digunakan!";
-    } else {
-        // Hash password sebelum disimpan
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        return "Username sudah digunakan!";
+    }
 
-        // Simpan data ke database
-        $query = "INSERT INTO users (username, password, alamat, tanggal_lahir) VALUES ('$username', '$hashed_password', '$alamat', '$tanggal_lahir')";
-        if (mysqli_query($conn, $query)) {
-            $success = "Registrasi berhasil! Silakan login.";
-        } else {
-            $error = "Terjadi kesalahan saat registrasi: " . mysqli_error($conn);
-        }
+    // Hash password sebelum disimpan
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    // Simpan data ke database
+    $query = "INSERT INTO users (username, password, alamat, tanggal_lahir) VALUES ('$username', '$hashed_password', '$alamat', '$tanggal_lahir')";
+
+    if (mysqli_query($conn, $query)) {
+        return "Registrasi berhasil! Silakan login.";
+    } else {
+        return "Terjadi kesalahan saat registrasi: " . mysqli_error($conn);
     }
 }
 
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
