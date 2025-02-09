@@ -15,42 +15,36 @@ if (isset($_POST['register'])) {
 
     if ($check) {
         $row = mysqli_fetch_assoc($check);
-        // echo "Jumlah data dalam tabel users: " . $row['jumlah'] . "<br>";
-
+        echo "Jumlah data dalam tabel users: " . $row['jumlah'];
         if ($row['jumlah'] == 0) {
-            // Reset auto-increment jika tabel kosong
-            mysqli_query($conn, "ALTER TABLE users AUTO_INCREMENT = 1")
+            mysqli_query($conn, "ALTER TABLE users AUTO_INCREMENT = 1") 
                 or die(mysqli_error($conn));
+            submitRegistration(username,password,alamat,tanggal_lahir)
+        } elseif ($row['jumlah'] > 0) {
+            // Cek apakah username sudah ada
+            submitRegistration(username,password,alamat,tanggal_lahir)
+        } else {
+            echo "Error pada query: " . mysqli_error($conn);
         }
-
-        // Panggil fungsi registrasi
-        $message = submitRegistration($conn, $username, $password, $alamat, $tanggal_lahir);
-        echo $message; // Tampilkan pesan sukses atau error
-    } else {
-        echo "Error pada query: " . mysqli_error($conn);
     }
-}
-
-function submitRegistration($conn, $username, $password, $alamat, $tanggal_lahir)
-{
-    $check_username = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
-    if (mysqli_num_rows($check_username) > 0) {
-        return "Username sudah digunakan!";
+    
+    function submitRegistration(username,password,alamat,tanggal_lahir) {
+        $check_username = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
+        if (mysqli_num_rows($check_username) > 0) {
+            $error = "Username sudah digunakan!";
+        } else {
+            // Hash password sebelum disimpan
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    
+            // Simpan data ke database
+            $query = "INSERT INTO users (username, password, alamat, tanggal_lahir) VALUES ('$username', '$hashed_password', '$alamat', '$tanggal_lahir')";
+            if (mysqli_query($conn, $query)) {
+                $success = "Registrasi berhasil! Silakan login.";
+            } else {
+                $error = "Terjadi kesalahan saat registrasi: " . mysqli_error($conn);
+            }
+        }
     }
-
-    // Hash password sebelum disimpan
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    // Simpan data ke database
-    $query = "INSERT INTO users (username, password, alamat, tanggal_lahir) VALUES ('$username', '$hashed_password', '$alamat', '$tanggal_lahir')";
-
-    if (mysqli_query($conn, $query)) {
-        return "Registrasi berhasil! Silakan login.";
-    } else {
-        return "Terjadi kesalahan saat registrasi: " . mysqli_error($conn);
-    }
-}
-
 ?>
 
 <!DOCTYPE html>
