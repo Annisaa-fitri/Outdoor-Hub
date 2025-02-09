@@ -13,7 +13,7 @@ if(isset($_POST['login'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $check = mysqli_query($conn,"SELECT * FROM user WHERE username='$username' and password='$password'");
+    $check = mysqli_query($conn,"SELECT * FROM users WHERE username='$username' and password='$password'");
     $hitung = mysqli_num_rows($check);
     
     if($hitung>0){
