@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2025 at 09:38 PM
+-- Generation Time: Feb 09, 2025 at 06:55 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -77,8 +77,8 @@ INSERT INTO `toko` (`id`, `nama`, `alamat`, `deskripsi`, `jam_operasional`, `lat
 (31, 'Three Outdoor Rental Alat Camping', 'Gg. Ab0 No.19-30, Sekejati, Kec. Buahbatu, Kota Bandung, Jawa Barat 40286', 'Three_outdoor adalah tempat persewaan peralatan camping dengan pelayanan antar barang atau ambil di tempat.', '8.00 am–9.00 pm', '-6.9462101', '107.6507173', 5, '0895110006064'),
 (32, 'Pesagi Outdoor Equipment Rental Alat Camping Bandung', 'Jl. Sukahaji Wetan No.38, RT.04/RW.07, Sukarasa, Kec. Sukasari, Kota Bandung, Jawa Barat 40152', 'Sewa Peralatan camping Tenda dll.', '9.00 am–5.00 pm', '-6.8727649', '107.5853866', 4.8, '085609556216'),
 (33, 'Rental Camping Alf Gear Adventure', 'Gg. Perikanan 2 No.56, RT./RW/RW.003/005, Pelindung Hewan, Kec. Astanaanyar, Kota Bandung, Jawa Barat 40242', 'Menyewakan berbagai macam jenis kebutuhan camping', '6:00 am–11:00 pm', '-6.9395308', '107.6028211', 5, '08122177723'),
-(34, 'Kalimaya Outdoor Gear Rental/Sewa Alat Camping', 'Komplek permata cimahi, Jl. Kalimaya Raya No.29 Blok M4, Tanimulya, Kec. Ngamprah, Kabupaten Bandung Barat, Jawa Barat 40552', 'Menyediakan perlengkapan Hiking, Camping, Naik Gunung', '8:00 am–9:00 pm', '-6.8606134', '107.5188338', 5, '082337487577'),
-(35, 'Edelweis Outdoor jual&rental alat camping padalarang', 'Jl. Ciloa No.84, Mekarsari, Kec. Ngamprah, Kabupaten Bandung Barat, Jawa Barat 40552', '\"Edelwies Outdoor\" Merupakan Toko Perlengkapan Alat Gunung & layanan Sewa Alat Camping Padalarang dan sekitarnya.', '9:00 am–11:30 pm', '-6.8400526', '107.5081218', 5, '085210008996'),
+(34, 'Kalimaya Outdoor Gear Rental Sewa Alat Camping', 'Komplek permata cimahi, Jl. Kalimaya Raya No.29 Blok M4, Tanimulya, Kec. Ngamprah, Kabupaten Bandung Barat, Jawa Barat 40552', 'Menyediakan perlengkapan Hiking, Camping, Naik Gunung', '8:00 am–9:00 pm', '-6.8606134', '107.5188338', 5, '082337487577'),
+(35, 'Edelweis Outdoor jual rental alat camping padalarang', 'Jl. Ciloa No.84, Mekarsari, Kec. Ngamprah, Kabupaten Bandung Barat, Jawa Barat 40552', '\"Edelwies Outdoor\" Merupakan Toko Perlengkapan Alat Gunung & layanan Sewa Alat Camping Padalarang dan sekitarnya.', '9:00 am–11:30 pm', '-6.8400526', '107.5081218', 5, '085210008996'),
 (36, 'NEPTUNUS OUTDOOR', 'Jl. Abdulrahman No.13 A, Setiamanah, Kec. Cimahi Tengah, Kota Cimahi, Jawa Barat 40524', 'Sudah di buka Rental alat camping neptunus outdoor', '8:00 am–10:00 pm', '-6.8845', '107.5306029', 4.8, '085795832743'),
 (37, 'NUANSA OUTDOOR', 'Kp Nyalindung No.26, Singajaya, Kec. Cihampelas, Kabupaten Bandung Barat, Jawa Barat 40767', 'Rental Peralatan Camping & Pendakian di Bandung Barat', '8:00 am–8:00 pm', '-6.9372323', '107.4764309', 5, '081221428681'),
 (38, 'GHAZI OUTDOOR', 'Jatihandap No 2 RT 04/09, Depan mesjid As-Siraj, Jl. Jatihandap No.2, Jatihandap, Kec. Mandalajati, Kota Bandung, Jawa Barat 40195', 'Sewa Rental dan jual peralatan Camping / Outdoor', 'Open 24 hours', '-6.8932974', '107.6615151', 4.5, '0895361069197'),
@@ -88,7 +88,7 @@ INSERT INTO `toko` (`id`, `nama`, `alamat`, `deskripsi`, `jam_operasional`, `lat
 (42, 'GeoCamp', 'Komp. Puri Dago, Jl. Puri Dago IV No.4, Sukamiskin, Kec. Antapani, Kota Bandung, Jawa Barat 40293', 'Melayani jasa penyewaan (rental) peralatan camping', '9:00 am–5:00 pm', '-6.9184503', '107.6686732', 4.9, '08112346630'),
 (43, 'Oase Outdoor Bandung', 'Jl. Terusan Buah Batu No.161, Kujangsari, Kec. Bandung Kidul, Kota Bandung, Jawa Barat 40288', 'Toko kami tersedia berbagai macam peralatan Outdoor', '8:00 am–10:00 pm', '-6.9572882', '107.6396379', 4.9, '081321704210'),
 (44, 'Malabar Outdoor Rental Sewa Alat Camping Bandung', 'Jalan Raya Bojongsoang 175, Gang Desa No.42A, Kec. Bojongsoang, Kabupaten Bandung, Jawa Barat 40287', 'Menjual dan menyewakan peralatan outdoor dan camping', '9.00 am–8.00 pm', '-6.9762469', '107.6349449', 4.9, '08997898894'),
-(45, 'Jejaka Outdoor, Rental Alat Camping Bandung', 'Komplek Cibogo Indah No.36 A, Cangkuang Kulon, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40239', 'Tempat Sewa Alat Camping Bandung', '8.00 am–8.00 pm', '-6.9725147', '107.5946833', 4.8, '08999016417'),
+(45, 'Jejaka Outdoor Rental Alat Camping Bandung', 'Komplek Cibogo Indah No.36 A, Cangkuang Kulon, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40239', 'Tempat Sewa Alat Camping Bandung', '8.00 am–8.00 pm', '-6.9725147', '107.5946833', 4.8, '08999016417'),
 (46, 'May camp adventure', 'Bojong Koneng Barat RT 06 RW 06 No 44 Kelurahan, Campaka, Kec. Andir, Kota Bandung, Jawa Barat 40184', 'Menyewakan alat alat camp mulai dari tenda kapasitas 2-3 3-4 orang carier kapasitas 45-80lt dan masih banyak lagi. Mudah kan petualangan anda dengan menyewa di May Camp Adventure, salam rimba!', '8.00 am–10.00 pm', '-6.8965014', '107.5671498', 4.8, '08953610691'),
 (47, 'MOUNTGEAR Rental Alat Camping Bandung (Garasi Cempor)', 'Garasi Cempor- Gelanggang Taruna Karees, Jl. Martanegara No.4, Turangga, Kec. Lengkong, Kota Bandung, Jawa Barat 40263', 'Rental Alat Camping Bandung, Sewa Alat Camping Bandung', '8.00 am–8.30 pm', '-6.9330518', '107.6268184', 5, '083137724473'),
 (48, 'Rental Alat Camping Bandung VIKTOR OUTDOOR BANDUNG Cibiru', 'Jalan Pandanwangi 3 RT 1 RW 19 Kelurahan Cinunuk Kecamatan Cileunyi Kabupaten Bandung, 50 meter dari Indomaret Pandanwangi samping pom mini, Kota Bandung, Jawa Barat 40622', 'Rental/sewa peralatan camping bandung, dan terima jasa bongkar pasang dan menerima buat acara event besar kantor maupun instansi dll.', '7.00 am–9.00 pm', '-6.9441254', '107.7258448', 4.9, '082129191124'),
@@ -97,25 +97,6 @@ INSERT INTO `toko` (`id`, `nama`, `alamat`, `deskripsi`, `jam_operasional`, `lat
 (51, 'YUNSUKA Rental Camp Kopo', 'Jl. Raya Kopo Gg. Babakan Asih, RT.08/RW.01, Panjunan, Kec. Bojongloa Kaler, Kota Bandung, Jawa Barat 40232', 'Menyewakan berbagai macam alat camping, hiking, touring. Menerima jasa pengiriman, pemasangan untuk event dan gathering komunitas, kantor, dan family camp, serta layanan laundry tenda.', '7.00 am–7.00 pm', '-6.9303925', '107.5956866', 4.8, '087700149614'),
 (52, 'Odyssey Outdoor', 'Jln Babakan Sari No.15, Cipatik, Kec. Cihampelas, Kabupaten Bandung Barat, Jawa Barat 40562', 'Menjual dan menyewakan perlengkapan alat outdoor dan camping.', '9.00 am–9.00 pm', '-6.9409184', '107.5075594', 5, '081314150752'),
 (53, 'Saboga Rental Camping', 'Puspa Regency Blok B No. 188, Bandung, Jawa Barat 40561', 'Sewa peralatan camping, berlokasi di Cimenya Bandung.', '8.00 am–10.00 pm', '-6.9170131', '107.4983142', 4.9, '081909432000');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `username` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(1, 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -133,6 +114,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `alamat`, `tanggal_lahir`, `created_at`) VALUES
+(3, 'admin', '$2y$10$Xm/F7ZZ/216FzDe7GlaUS.Wu6x3xvPUb4EsutQPgpxzOnXwExL5bK', 'Bandung', '2003-12-06', '2025-02-09 16:50:44'),
+(4, 'tettatrisky', '$2y$10$baC.LuVp83Hdcfr2W1BbjOQZK92SLG3lBgGwgkt.4sIX1SZw.PSpK', 'Yogyakarta', '2003-12-06', '2025-02-09 16:50:55');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -140,12 +129,6 @@ CREATE TABLE `users` (
 -- Indexes for table `toko`
 --
 ALTER TABLE `toko`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -166,16 +149,10 @@ ALTER TABLE `toko`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

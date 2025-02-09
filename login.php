@@ -1,26 +1,31 @@
 <?php
-require 'koneksi.php';
+require 'koneksi.php'; // Panggil koneksi database
 
 if (isset($_POST['login'])) {
-    $username = $_POST['username'];
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = $_POST['password'];
 
-    $query = mysqli_query($koneksi, "SELECT * FROM users WHERE username = '$username'");
+    // Pastikan login ke tabel yang benar (users atau user)
+    $query = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
+    
     if (mysqli_num_rows($query) > 0) {
         $user = mysqli_fetch_assoc($query);
+        
+        // Gunakan password_verify() untuk mencocokkan password
         if (password_verify($password, $user['password'])) {
             $_SESSION['login'] = true;
             $_SESSION['username'] = $user['username'];
-            header('location: index.php');
+            header('Location: index.php'); // Arahkan ke halaman utama
+            exit();
         } else {
-            $error = "Password salah!";
+            echo "<script>alert('Password salah!');</script>";
         }
     } else {
-        $error = "Username tidak ditemukan!";
+        echo "<script>alert('Username tidak ditemukan!');</script>";
     }
 }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
