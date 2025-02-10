@@ -26,7 +26,7 @@ $conn->close();
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="index.php">
             <img src="assets/logo.png" alt="Logo" class="navbar-logo">
@@ -39,6 +39,19 @@ $conn->close();
                 <li class="nav-item"><a class="nav-link" href="index.php"><i class="fas fa-home"></i> Home</a></li>
                 <li class="nav-item"><a class="nav-link active" href="toko.php"><i class="fas fa-store"></i> Toko</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.php"><i class="fas fa-info-circle"></i> About</a></li>
+                <?php if (isset($_SESSION['login'])): ?>
+                        <li class="nav-item">
+                            <a class="nav-link btn-logout" href="logout.php">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link btn-login" href="login.php">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </a>
+                        </li>
+                    <?php endif; ?>
             </ul>
         </div>
     </div>
